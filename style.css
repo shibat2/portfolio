@@ -1,7 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: reitam;
+    src: url("../webfonts/Reitam Regular.otf") format("opentype")
+  }
+
 .background {
-    background-image: url('test01.jpg');
+    background-image: url('img/test01.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+/* トップへ戻るボタン (参考: https://www.fuji-blo.com/entry/page-top) */
+#page-top {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    height: 50px;
+    padding: 0 0 0 35px;
+  
+    border-top: solid 1px;
+    text-decoration: none;
+    color: rgb(128, 128,128);
+    transform: rotate(90deg);
   }
+  #page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+  }
+
+
   
