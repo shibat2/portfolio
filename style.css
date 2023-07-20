@@ -2,16 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: reitam;
-    src: url("../webfonts/Reitam Regular.otf") format("opentype")
-  }
+    font-family: 'Roboto Mono', monospace;
+    color: #ededed;
+    
+ }
 
-.background {
+/* .background {
     background-image: url(img/bg-test.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
+} */
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(img/bg-test.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+
+    }
 
 :root,
 html {
@@ -30,7 +40,7 @@ html {
   
     border-top: solid 1px;
     text-decoration: none;
-    color: rgb(128, 128,128);
+    color: rgb(0, 0, 0);
     transform: rotate(90deg);
   }
   #page-top::before {
@@ -48,6 +58,11 @@ html {
 /*==================================================
 スライダーのためのcss
 ===================================*/
+.test {
+    padding: 70px;
+    height: 100vh;
+    z-index: -1;
+}
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
     margin:0 auto;
@@ -70,7 +85,7 @@ html {
 }
 
 
-/*矢印の設定*/
+/*------------------矢印の設定----------------------*/
 
 /*戻る、次へ矢印の位置*/
 .slick-prev, 
@@ -120,4 +135,194 @@ html {
 .slick-dots .slick-active button{
     background:#333;/*ドットボタンの現在地表示の色*/
 }
+/*------------------矢印の設定----------------------*/
+
+
+/*------------------ヘッダーを上部に固定----------------------*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999; /*重なりを調整*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--base-bg);
+  }
+  header h1 {
+    text-align: center;
+    position: relative;
+  }
+  header h1::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-color);
+  }
+  header h1 img {
+    max-width: 100%;
+  }
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  header ul li a {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    color: var(--light-100);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  header ul li a:hover,
+  header ul li a:active {
+    color: var(--light-100);
+    background-color: var(--primary-050);
+  }
   
+  @media (min-width: 769px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    header h1 {
+      content: none;
+      height: 100px;
+    }
+    header h1::after {
+      content: none;
+    }
+    header ul {
+      margin-top: 0;
+      height: 100%;
+    }
+    header li {
+      display: flex;
+      align-items: center;
+    }
+  }
+  /*----------------------------------------*/
+
+/*------------------footer----------------------*/
+footer {
+    margin-top: 20px;
+    height: 200px;
+    padding-top: 100px;
+    text-align: center;
+    background-color: #666;
+}
+/*----------------------------------------*/
+
+
+/*------------------home----------------------*/
+ #home {
+    height: 100vh;
+    text-align: center;
+    padding-top: 45vh;
+  }
+  #home div {
+    font-size: 1.3rem;
+    letter-spacing: 5px;/*文字間*/
+
+  }
+  @media (max-width: 390px) {
+    #home {
+        padding-top: 40vh;
+    }
+  }
+
+#about-home {
+    padding-top: 50vh;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 5px;/*文字間*/
+}
+#skill-home {
+    padding-top: 50vh;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 5px;/*文字間*/
+}
+/*----------------------------------------*/
+
+
+/*------------------midasi----------------------*/
+.midasi {
+    position: relative;
+    padding: .3em 0 .2em 1em;
+    border-bottom: 3px solid #575757;
+    color: #333333;
+}
+
+.midasi::before {
+    position: absolute;
+    top: 0;
+    left: .3em;
+    transform: rotate(55deg);
+    height: 11px;
+    width: 12px;
+    background: #575757;
+    content: '';
+}
+
+.midasi::after {
+    position: absolute;
+    transform: rotate(15deg);
+    top: .6em;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background: #575757;
+    content: '';
+}
+/*----------------------------------------*/
+
+.timeline {
+  list-style: none;
+}
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+/* for Desktop */
+@media ( min-width : 640px ){
+  .timeline > li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #b1b1b1 solid;
+    padding-left: 30px;
+  }
+  .timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #7c7c7c;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+  }
+}
