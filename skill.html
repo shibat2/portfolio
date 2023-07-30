@@ -24,65 +24,77 @@
             <a href="index.html"><img src="img/icon3.png" alt="my logo" width="70px" height="70px"></a>
             </div>
         <nav>
-          <ul>
+            <ul class="gnavi">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="skill.html">Skill</a></li>
+            <li class="here"><a href="#skill-home">Skill</a></li>
           </ul>
         </nav>
     </header>
 
         <!-- 題名 -->
     <section id="skill-home">
-        <h1>SKILL</h1>
+        <h1 class="eachTextAnime">SKILL</h1>
     </section>
 
         <!-- 中身 -->
     <section class="skill-content">
-        <ul>
-            <li class="skill-item">
-               <div class="skill01">
-                    <img src="img/test01.jpg" alt="logo" width="50px" height="50px">
-                    <h2>illustrator</h2>
-                </div>
-                <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
-                <img class="work" src="img/test01.jpg" >
-            </li>
+        <ul >
 
-            <li class="skill-item">
+            <li class="box fadeUpTrigger">
                 <div class="skill01">
-                    <img src="img/test01.jpg" alt="logo" width="50px" height="50px">
-                    <h2>Photoshop</h2>
+                   <img src="img/MAYA-icon.png" alt="logo" width="50px" height="50px">
+                   <h2>MAYA</h2>
+               </div> 
+               <p>女性の全身模型をMAYAを使って作成した<br>作成時間約1日</p>
+               <img class="work" src="img/maya2.png" >
+           </li>
+
+
+            <li class="box fadeUpTrigger">
+                <div class="skill01">
+                    <img src="img/PR-icon.png" alt="logo" width="50px" height="50px">
+                    <h2>Premiere Pro</h2>
                 </div> 
-                <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
-                <img class="work" src="img/test01.jpg" >
+                <p>mayaを使って作成した動画に音やテキストを加えて編集をした<br>作成時間約5時間</p>
+                <video controls width="300"  src="img/pr.mp4"></video>
             </li>
 
-            <li class="skill-item">
+            <li class="box fadeUpTrigger">
+                <div class="skill01">
+                     <img src="img/AI-icon.png" alt="logo" width="50px" height="50px">
+                     <h2>Illustrator</h2>
+                 </div>
+                 <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
+                 <img class="work" src="img/ai-food.png" >
+             </li>
+            
+
+            <li class="box fadeUpTrigger">
+                <div class="skill01">
+                    <img src="img/Pencil-icon.png" alt="logo" width="50px" height="50px">
+                    <h2>デッサン</h2>
+                </div> 
+                <p>鉛筆,練り消しゴム,ガーゼのみでかいた蛇口のデッサン<br>作成時間約1日</p>
+                <img class="work" src="img/dessan.png" >
+            </li>
+
+            <li class="box fadeUpTrigger">
                  <div class="skill01">
-                    <img src="img/test01.jpg" alt="logo" width="50px" height="50px">
-                    <h2>MAYA</h2>
-                </div> 
-                <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
-                <img class="work" src="img/test01.jpg" >
-            </li>
-
-            <li class="skill-item">
-                <div class="skill01">
-                    <img src="img/test01.jpg" alt="logo" width="50px" height="50px">
+                    <img src="img/C++-icon.png" alt="logo" width="60px" height="60px">
                     <h2>C++言語</h2>
                 </div> 
-                <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
-                <img class="work" src="img/test01.jpg" >
+                <p>基本的なプログラムが作成可能</p>
+                <img class="work" src="img/C++2.png" >
             </li>
 
-            <li class="skill-item">
-                 <div class="skill01">
-                    <img src="img/test01.jpg" alt="logo" width="50px" height="50px">
-                    <h2>C言語</h2>
-                </div> 
-                <p>"令和４年度食品ロス削減月間ポスターデザイン案"に投稿したイラスト<br>作成時間約1日</p>
-                <img class="work" src="img/test01.jpg" >
+            <li class="box fadeUpTrigger">
+                <div class="skill01">
+                   <img src="img/C-icon.png" alt="logo" width="60px" height="60px">
+                   <h2>C言語</h2>
+               </div> 
+               <p>簡単な画像処理プログラムが書ける</p>
+               <img class="work" src="img/gazosyori2.png" >
             </li>
         </ul>
     </section>
@@ -92,6 +104,18 @@
             <p>&copy; YURIKO SHIBATA 2022-2026</p>
     </footer>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="kadai.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+        <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/js/3-2-3-1.js"></script>
+
+
 <body>
     
 </body>
