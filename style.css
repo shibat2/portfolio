@@ -658,5 +658,64 @@ footer {
     }
     
     /*========= homeの自己PR ===============*/
+    .rm {
+      background-color: rgba(225, 217, 217, 0.296);
+      margin-bottom: 30px;
+    }
+    .rm h1 {
+      padding: 10px;
+      text-align: center;
+    }
+    .rm-container {
+      margin: 0 10% 0 10%;
+      display: flex;
+      align-items: flex-start; /* 要素を上揃えにします */
+  }
+  
+  .pdf{
+      margin: 10px; /* オプション: 要素間に余白を追加 */
+  }
+
+  .rm table {
+    width: auto;
+    margin: 30px 0 30px 50px;
+    padding: 10px;
+    background-color: rgba(57, 57, 57, 0.371);
+  }
+
+  .rm table tr {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  
+  .rm table tr:last-of-type {
+    border-bottom: none;
+  }
+  
+  .rm table th,
+  .rm table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 0 24px;
+    font-weight: normal;
+    line-height: 2em; /* 行の高さを2emに設定 */
+  
+    
+  }
+  
+  .rm table th {
+    min-width: 6rem;
+  }
 
 
+  @media (max-width: 900px) {
+    .rm-container {
+      display: inline;
+      text-align: center;
+    }
+    .rm table {
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  
