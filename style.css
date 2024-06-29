@@ -28,9 +28,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.timeline img {
-        box-shadow: 15px 15px 15px 0 #343434;
-}
+
 .skill-content .work {
     box-shadow: 15px 15px 15px 0 #343434;
 }
@@ -77,7 +75,7 @@ html {
 
 .slider img {
     width:auto;/*スライダー内の画像を60vwにしてレスポンシブ化*/
-    height:600px;
+    height:500px;
 }
 
 .slider .slick-slide {
@@ -225,14 +223,20 @@ header {
 .gnavi li a{
     /*円の基点とするためrelativeを指定*/
   position: relative;
+  text-decoration: none;
 }
 
 .gnavi li.here a,
-.gnavi li a:hover{
+.gnavi li a:hover
+{
   color:#979797;
 }
+.RM a:hover{
+  color:#ffffff;
+}
 
-.gnavi li a::after {
+.gnavi li a::after
+{
     content: '';
     /*絶対配置で線の位置を決める*/
     position: absolute;
@@ -251,11 +255,32 @@ header {
 
 /*現在地とhoverの設定*/
 .gnavi li.here a::after,
-.gnavi li a:hover::after {
+.gnavi li a:hover::after{
     height: 2px;/*縦幅を変化*/
     border-radius: 0;/*丸みをなくす*/    
     transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
 }
+
+/* .RM a{
+  color: #979797;
+  padding-bottom: 7px;
+} */
+.RM a {
+  margin-top: 10px;
+  display: inline-block; /* リンクをボックスとして扱う */
+  padding: 2px 6px; /* 内側の余白を調整 */
+  border: 3px solid #979797; /* 線の太さと色 */
+  border-radius: 10px; /* 角を丸くする（任意） */
+  text-decoration: none; /* デフォルトの下線を削除 */
+  color: #979797; /* テキストの色 */
+  /* background-color: #f0f0f0; 背景色（任意） */
+}
+
+.RM a:hover {
+  color: #ffffff;
+  border: 3px solid #ffffff; /* 線の太さと色 */
+}
+
 /*========= レイアウトのためのCSS ===============*/
 
 
@@ -263,8 +288,9 @@ header {
 /*------------------footer----------------------*/
 footer {
     margin-top: 20px;
-    height: 200px;
-    padding-top: 100px;
+    height: 100px;
+    /* width: 1600px; */
+    padding-top: 50px;
     text-align: center;
     background-color: #666;
 }
@@ -279,7 +305,7 @@ footer {
   }
   #home div {
     font-size: 1.3rem;
-    letter-spacing: 5px;/*文字間*/
+    letter-spacing: 2px;/*文字間*/
 
   }
   @media (max-width: 390px) {
@@ -367,7 +393,20 @@ footer {
   }
   .timeline-content img {
     margin-top: 20px;
+    
   }
+  .timeline img {
+    box-shadow: 15px 15px 15px 0 #000000c3;
+    margin: 20px 20px 0 0;
+    border-radius: 7%;
+  }
+
+  .timeline video {
+    box-shadow: 15px 15px 15px 0 #000000c3;
+    margin: 20px 20px 0 0;
+    border-radius: 7%;
+  }
+
   
 
   @media (min-width: 1000px) {
@@ -386,7 +425,7 @@ footer {
       }
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 600px) {
     .timeline {
         margin: 0 0 20px 20px;
       }
@@ -451,9 +490,9 @@ footer {
       }
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 600px) {
     .skill-content {
-        margin: 0 40px;
+        margin: auto;
         width: 300px;
       }
 
@@ -511,3 +550,113 @@ footer {
         opacity: 0;
     }
     
+/*========= homeの自己紹介 ===============*/
+#myinfo h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.myinfo-container {
+  display: flex;
+  flex-direction: column;
+  width: auto; 
+  
+}
+
+#myinfo table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(225, 217, 217, 0.296);
+}
+
+#myinfo table tr {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+#myinfo table tr:last-of-type {
+  border-bottom: none;
+}
+
+#myinfo table th,
+#myinfo table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px 0 24px;
+  font-weight: normal;
+  line-height: 2em; /* 行の高さを2emに設定 */
+
+  
+}
+
+#myinfo table th {
+  min-width: 6rem;
+}
+
+.googlemap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* 画像間の余白を設定 */
+  /* max-height: 400px;  */
+  /* overflow: hidden;  */
+}
+
+.googlemap img {
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10%;
+}
+
+/* PC用のレイアウトCSS */
+@media (min-width: 900px) {
+  #myinfo {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  #myinfo h3 {
+    text-align: initial;
+  }
+
+  #myinfo table {
+    width: 480px;
+    margin-right: 2rem;
+  }
+
+  .myinfo-container {
+    flex-direction: row; 
+  }
+
+  .googlemap {
+    max-height: 100%; 
+    width: 60%; 
+    max-width: 1000px; 
+  }
+
+  .googlemap img {
+    max-height: 100%;
+    object-fit: contain;
+    /* border-radius: 10%; */
+  }
+}
+    /*========= homeの自己紹介 ===============*/
+    /*========= homeの自己PR ===============*/
+    .pr{
+      margin: 10% 5% 5% 5% ;
+      padding: 10px;
+      background-color: rgba(225, 217, 217, 0.296);
+    }
+
+    .pr p {
+      letter-spacing: 2px; /* 文字と文字の間に2ピクセルのスペースを追加 */
+      line-height: 2em; /* 行の高さを2emに設定 */
+      border-bottom: 3px solid rgb(255, 255, 255);
+      padding-top: 20px;
+    }
+    
+    /*========= homeの自己PR ===============*/
+
+
