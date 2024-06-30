@@ -15,7 +15,7 @@ body {
       background-position: center;
     }
 
- @media (max-width: 390px) {
+ @media (max-width: 900px) {
     body {    
         background-position: 23%;
     }
@@ -89,7 +89,7 @@ html {
 	opacity: 1;/*透過なし*/
 }
 
-@media (max-width: 390px) {
+@media (max-width: 900px) {
     .photo {
         height: 250px;
         padding: 30px;
@@ -308,7 +308,7 @@ footer {
     letter-spacing: 2px;/*文字間*/
 
   }
-  @media (max-width: 390px) {
+  @media (max-width: 900px) {
     #home {
         padding-top: 38vh;
         height: 65vh;
@@ -583,7 +583,7 @@ footer {
 #myinfo table td {
   text-align: left;
   vertical-align: top;
-  padding: 16px 0 24px;
+  padding: 16px 0 24px 10px;
   font-weight: normal;
   line-height: 2em; /* 行の高さを2emに設定 */
 
@@ -624,6 +624,7 @@ footer {
   #myinfo table {
     width: 480px;
     margin-right: 2rem;
+    padding-left: 10px;
   }
 
   .myinfo-container {
@@ -716,6 +717,23 @@ footer {
       text-align: center;
       margin: auto;
     }
+    .rm embed,
+    .rm img
+    {
+      width: 80%;
+    }
   }
+
+  @media (max-width: 900px) {
+    .work,
+    .skill-content video,
+    .timeline img,
+    .timeline video
+    {
+      width: 80%;
+    }
+  }
+
+
 
   
