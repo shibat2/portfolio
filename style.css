@@ -311,7 +311,7 @@ footer {
   @media (max-width: 900px) {
     #home {
         padding-top: 38vh;
-        height: 65vh;
+        height: 100vh;
 
     }
     #home p{
